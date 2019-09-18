@@ -1,0 +1,26 @@
+{
+  "name": "SQL_API",
+  "version": "1.0.0",
+  "description": "Learning the use of accessing data through API's.",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielM-IT/SQL_API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielM-IT/SQL_API/issues"
+  },
+  "homepage": "https://github.com/DanielM-IT/SQL_API#readme"
+}
