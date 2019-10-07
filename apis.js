@@ -3,12 +3,12 @@ const url = require('url')
 
 const data = require('./data')
 
-function employeesList(req, res) {
+function accountList(req, res) {
     res.statusCode = 200
     res.end(JSON.stringify(data))
 }
 
-function addEmployee(req, res) {
+function addAccount(req, res) {
     let body = ''
 
     req.on('data', chunk => body += chunk.toString())
@@ -29,16 +29,16 @@ function errorRequest(req, res) {
 }
 
 const server = http.createServer((req, res) => {
-    const urlEmployee = url.parse(req.url)
-    //console.log(urlEmployee)
+    const urlAccount = url.parse(req.url)
+    //console.log(urlAccount)
 
-    if (urlEmployee.pathname == '/api/employees') {
+    if (urlAccount.pathname == '/api/account') {
         switch(req.method) {
             case 'GET':
-                employeesList(req, res)
+                accountList(req, res)
                 break;
             case 'POST':
-                addEmployee(req, res)
+                addAccount(req, res)
                 break;
             default:
                 errorRequest(req, res)

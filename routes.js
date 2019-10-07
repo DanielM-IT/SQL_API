@@ -1,9 +1,9 @@
 /* 
-1. Get - list of all emplowees
-2. Get - list of information about one single employee
-3. POST - create an employee
-4. PATCH - update an employee
-5. DELETE -  remove an employee
+1. Get - list of all accounts
+2. Get - list of information about one single account
+3. POST - create an account
+4. PATCH - update an account
+5. DELETE -  remove an account
 
 6. GET - list of all departments
 7. Get - list of all information about one single department
@@ -13,12 +13,12 @@
 */
 
 
-// inside routes we call employee by using require.
-const employeeList = require('./employee')
+// inside routes we call account by using require.
+const accountList = require('./account')
 const departmentList = require('./department')
 
 module.exports = {
-    employeeList
+    accountList
 }
 ,
 {

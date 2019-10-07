@@ -3,19 +3,19 @@ const app = express()
 const router = express.Router()
 const data = require('./data')
 
-// app.get('/api/employees', (req, res) => {
+// app.get('/api/account', (req, res) => {
 //     res.send('Hello World!')
 // })
 
-// app.post('/api/employees', (req, res) => {
+// app.post('/api/account', (req, res) => {
 //     res.send('HTTP POST setup done!')
 // })
 
-app.all('/api/employees', (req, res, next) => {
+app.all('/api/account', (req, res, next) => {
     res.send(`${req.method} setup done!`)
 })
 
-app.route('./api/employees')
+app.route('./api/account')
     .get((req, res) => {
         res.send('GET')
     })
@@ -24,25 +24,25 @@ app.route('./api/employees')
     })
 
 
-router.get('/employees', (req, res) => res.send(data))
+router.get('/account', (req, res) => res.send(data))
 
 app.use('/api', router)
 
 app.use('/images', express.static('images'))
 
-router.get('/employees', (req, res) => {
+router.get('/account', (req, res) => {
     console.log(req.query)
 
     return res.send(data)
 })
 
 
-router.get('/employees/:id', (req, res) => {
+router.get('/account/:id', (req, res) => {
     const id = +req.params.id
 
-    const employee = data.filter(d => d.id == id)
+    const account = data.filter(d => d.id == id)
     console.log(req.params)
-    return res.send(employee)
+    return res.send(account)
 })
 
 
